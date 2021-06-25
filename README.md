@@ -3,6 +3,30 @@
 This extends `mysql:latest` with cron & curl which is used with our 
 deployed Wordpress websites.
 
+## Example useage:
+
+```yaml
+version: '3.8'
+services:
+
+  cron:
+    image: nonfiction/wordpress-cron:v1
+
+    deploy:
+      mode: replicated
+      replicas: 1
+
+    environment:
+      HOST: "mysite.abc.example.com"
+      DB_HOST: "mysql.example.com"
+      DB_PORT: "3306"
+      DB_USER: "mysite"
+      DB_PASSWORD: "supersecretpassword"
+      DB_NAME: "mysite_abc_example_com"
+
+    volumes:
+      - /data/mysite/dump.sql:/cron/dump.sql
+```
 
 ## Makefile commands:  
 
