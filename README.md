@@ -3,7 +3,7 @@
 This extends `mysql:latest` with cron & curl which is used with our 
 deployed Wordpress websites.
 
-## Example useage:
+## Usage:
 
 ```yaml
 version: '3.8'
