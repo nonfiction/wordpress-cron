@@ -2,6 +2,8 @@
 
 # Environment variables expected:
 export HOST
+export UPSTREAM_USER
+export UPSTREAM_PASSWORD
 export DB_HOST
 export DB_PORT
 export DB_USER

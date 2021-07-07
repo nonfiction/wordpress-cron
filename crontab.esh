@@ -1,5 +1,5 @@
 # Run wp-cron every 5 minutes
-*/5 * * * * cron curl https://<%= $HOST -%>/wp/wp-cron.php?doing_wp_cron > /dev/null 2>&1
+*/5 * * * * cron curl https://<%= $UPSTREAM_USER -%>:<%= $UPSTREAM_PASSWORD -%>@<%= $HOST -%>/wp/wp-cron.php?doing_wp_cron > /dev/null 2>&1
 #
 # Export database every hour
 55 * * * * cron mysqldump -h<%= $DB_HOST -%> -P<%= $DB_PORT -%> -u<%= $DB_USER -%> -p<%= $DB_PASSWORD -%> <%= $DB_NAME -%> --set-gtid-purged=OFF 2> /dev/null > /cron/dump.sql
