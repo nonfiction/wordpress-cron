@@ -1,4 +1,4 @@
-FROM mysql:latest
+FROM mysql:debian
 
 # Install cron, curl and esh
 RUN apt-get update && apt-get -y install cron curl
