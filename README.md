@@ -10,7 +10,7 @@ version: '3.8'
 services:
 
   cron:
-    image: nonfiction/wordpress-cron:v2
+    image: nonfiction/wordpress-cron:v3
 
     deploy:
       mode: replicated
